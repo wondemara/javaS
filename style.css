@@ -1,0 +1,194 @@
+*,::after,::before{
+    border: none;
+    outline: none;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,a,p{
+    color: black;
+}
+body,html{
+    scroll-behavior: smooth;
+    background-color: #f1f1f1;  
+}
+/* la decoration du header de notre site */
+/* la decoration du header de notre site */
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    position: fixed;
+}
+
+.heard_logo{
+    width: 10%;
+    max-width: 80px;
+    height: 10%;
+}
+.heard_logo img{
+    width: 100%;
+    height: auto;
+}
+.list_lien{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 1rem;
+    font-size: calc(20px );
+}
+
+.menu_burger {
+  position: absolute; 
+  top: 10%; 
+  right: 3%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu_burger .tir1{
+   position: absolute; 
+   top: 20%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80%;
+   height: 5px;
+   background-color: black;
+}
+.menu_burger .tir2{
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background-color: black;
+ }
+ .menu_burger .tir3{
+    position: absolute; 
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5px;
+    background-color: black;
+ }
+ .active {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(211, 209, 209);
+    position: absolute;
+}
+.active .list_lien{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: calc(20px + 2vw);
+}
+.active .menu_burger{
+    position: absolute;
+    top: 2px;
+}
+.active .menu_burger .tir1{
+    top: 40%;
+    background-color: orange;
+    transform: rotate(135deg);
+}
+.active .menu_burger .tir3{
+    top: 40%;
+    background-color: orange;
+    transform: rotate(-135deg);
+}
+.active .menu_burger .tir2{
+  opacity: 0;
+}
+/* la decoration de notre main */
+/* la decoration de notre main */
+main{
+    width: 100%;
+    text-align: center;
+}
+.section3{
+    text-align: start;
+    margin: 1rem;
+}
+.section3 .titre1{
+    color: #584e4e;
+}
+span{
+    color: black;
+}
+.section3 input{
+    display: block;
+    width: 50%;
+    min-width: 100px;
+    color: #fff;
+    background-color: black;
+    height: 30px;
+    border-radius: 20px;
+    margin:  7px 0 0 0;
+}
+.image1,.image2,.image3{
+    cursor: pointer;
+    width: 20%;
+}
+.image{
+    width: 50%;
+}
+/* la partie responsive de mon site */
+/* la partie responsive de mon site */
+ @media screen and (max-width:780px){
+    body{
+        font-size: calc(15px + 1.5vw);
+    }
+    header{
+        height: 45px;
+    }
+    input{
+        font-size: calc(20% + 2vw);
+    }
+    .list_lien{
+        display: none;
+    }
+    .menu_burger{
+        display: block;
+    }
+ }
+ @media screen and (min-width:780px){
+    .image{
+        width:calc(300px + 1.5vw);
+    }
+    main{
+        display: grid;
+        position: relative;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .section1{
+        margin: 1rem 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        grid-area: 2/1/3/3;
+    }
+    .section2{
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        margin: 1rem 0;
+        grid-area: 1/2/3/3;
+    }
+   .section3{
+      width: 300px;
+      margin: 20% 0 0 20%;
+   }
+}
