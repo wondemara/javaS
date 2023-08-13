@@ -142,6 +142,84 @@ span{
 .image{
     width: 50%;
 }
+footer{
+    width: 60%;
+    max-width: 400px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 10px grey;
+    text-align: center;
+    padding: 3%;
+    overflow: hidden;
+}
+.footer_ele{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 2% 0%;
+}
+
+.inscription,.connexion{
+    width: 50%;
+    height: 20px;
+    cursor: pointer;
+}
+.inscription{
+    background-color: rgb(10, 10, 10);
+}
+.inscription h3{
+    color: #fff;
+}
+label,input{
+    display: block;
+    width: 100%;
+    text-align: start;
+}
+input{
+    height: 30px;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid black;
+    
+}
+label{
+    margin: 2px 5px;
+    display: none;
+}
+.oubli{
+    text-align: start;
+    color: red;
+    margin: 4% 0;
+}
+.envoyez{
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    font-size: 20px;
+}
+.connexion_corp{
+    display: none;
+}
+.vien{
+    display: block;
+    animation: vien 0.5s linear;
+}
+@keyframes vien {
+    0%{
+        transform: translateX(20%);
+    }
+}
+
+.part{
+    display: none;
+}
+.pas,.pass{
+    color:red;
+    cursor: pointer;
+}
+.incription_corpp{
+    display: none;
+}
 /* la partie responsive de mon site */
 /* la partie responsive de mon site */
  @media screen and (max-width:780px){
@@ -150,6 +228,9 @@ span{
     }
     header{
         height: 45px;
+    }
+    footer{
+        font-size: calc(60% );
     }
     input{
         font-size: calc(20% + 2vw);
